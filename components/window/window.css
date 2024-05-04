@@ -1,0 +1,22 @@
+.container {
+  margin-left: 18%;
+  margin-right: 18%;
+
+  background-color: #135d66;
+  border-radius: 20px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  backdrop-filter: blur(10px);
+}
+
+/* .add {
+  background-color: black;
+  color: white;
+  font-size: large;
+  border: solid 1px white;
+  border-radius: 7px;
+  padding: 1rem;
+  padding-left: 1.2rem;
+  padding-right: 1.2rem;
+} */
