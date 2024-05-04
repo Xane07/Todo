@@ -15,6 +15,7 @@ export default function Admin() {
       },
       body: JSON.stringify({
         name: name,
+        lineThrough: false,
       }),
     });
     const data = await res.json();
@@ -46,7 +47,7 @@ export default function Admin() {
         </button>
       </form>
       <div>
-        <Link href={"/"}>Back</Link>
+        <Link className="back" href={"/"}>{`<--`}</Link>
       </div>
     </>
   );
