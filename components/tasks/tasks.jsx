@@ -3,10 +3,14 @@ import React from "react";
 import "./tasks.css";
 import Task from "./task";
 
-const Tasks = ({ tasks, onDelete, onToggle }) => {
+const Tasks = ({ tasks, onDelete }) => {
   return (
     <>
-      <Task tasks={tasks} onDelete={onDelete} onToggle={onToggle} />
+      {tasks.length > 0 ? (
+        <Task tasks={tasks} onDelete={onDelete} />
+      ) : (
+        "Nothing to Display"
+      )}
     </>
   );
 };

@@ -27,18 +27,13 @@ const Window = () => {
     });
   };
 
-  // Handling Toggling Linethrough
-  const toggleLine = (id) => {
-    console.log(id);
-  };
-
   return (
     <>
       <div className="container">
         <div>
           <h2>Tasks</h2>
         </div>
-        <Tasks tasks={tasks} onDelete={handleDelete} onToggle={toggleLine} />
+        <Tasks tasks={tasks} onDelete={handleDelete} />
       </div>
     </>
   );

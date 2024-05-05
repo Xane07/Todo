@@ -7,21 +7,44 @@ const poiretOne = Poiret_One({
   display: "swap",
 });
 
-const Task = ({ tasks, onDelete, onToggle }) => {
-  // Adding Line-through when a task in done.
-
-  const handleDone = (e) => {
-    if (e.target.style.textDecoration === "line-through") {
-      e.target.style.textDecoration = "none";
-    } else {
-      e.target.style.textDecoration = "line-through";
-    }
-  };
-
+const Task = ({ tasks, onDelete }) => {
   return (
     <div>
       {tasks.map((task) => (
-        <h3 className={poiretOne.className} key={task.id} onClick={handleDone}>
+        <h3
+          className={`${poiretOne.className} h3 ${
+            task.lineThrough ? "line-through" : ""
+          }`}
+          key={task.id}
+          onClick={(e) => {
+            task.lineThrough = !task.lineThrough;
+
+            if (e.target.style.textDecoration === "line-through") {
+              e.target.style.textDecoration = "none";
+            } else {
+              e.target.style.textDecoration = "line-through";
+            }
+
+            const fetchPut = async () => {
+              const res = await fetch(
+                `https://json-zce0.onrender.com/tasks/${task.id}`,
+                {
+                  method: "PUT",
+                  headers: {
+                    "Content-Type": "application/json",
+                  },
+                  body: JSON.stringify({
+                    name: task.name,
+                    lineThrough: task.lineThrough,
+                  }),
+                }
+              );
+              const data = await res.json();
+              console.log(data);
+            };
+            fetchPut();
+          }}
+        >
           {task.name}
 
           <button
