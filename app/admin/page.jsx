@@ -4,7 +4,7 @@ import Link from "next/link";
 import { useState } from "react";
 
 export default function Admin() {
-  const api = "https://json-zce0.onrender.com/tasks";
+  const api = "https://json-ie9u.onrender.com/tasks";
   const [name, setName] = useState("");
 
   const postData = async () => {

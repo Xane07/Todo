@@ -27,7 +27,7 @@ const Task = ({ tasks, onDelete }) => {
 
             const fetchPut = async () => {
               const res = await fetch(
-                `https://json-zce0.onrender.com/tasks/${task.id}`,
+                `https://json-ie9u.onrender.com/tasks/${task.id}`,
                 {
                   method: "PUT",
                   headers: {
