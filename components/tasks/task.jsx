@@ -7,6 +7,8 @@ const poiretOne = Poiret_One({
   display: "swap",
 });
 
+const api = "https://json-wlj8.onrender.com/tasks"
+
 const Task = ({ tasks, onDelete }) => {
   return (
     <div>
@@ -27,7 +29,7 @@ const Task = ({ tasks, onDelete }) => {
 
             const fetchPut = async () => {
               const res = await fetch(
-                `https://json-ie9u.onrender.com/tasks/${task.id}`,
+                `${api}/${task.id}`,
                 {
                   method: "PUT",
                   headers: {

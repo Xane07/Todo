@@ -1,4 +1,4 @@
-// File: /Users/pratham./Documents/Todo/app/admin/page.jsx
+// File: /workspaces/Todo/app/admin/page.jsx
 import * as entry from '../../../../app/admin/page.js'
 import type { ResolvingMetadata, ResolvingViewport } from 'next/dist/lib/metadata/types/metadata-interface.js'
 
