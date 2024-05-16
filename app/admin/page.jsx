@@ -20,12 +20,15 @@ export default function Admin() {
     });
     const data = await res.json();
     console.log(data);
+    setTimeout(() => {
+      alert(`${name} added successfully..`);
+    }, 1000);
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
     postData();
-    alert(`${name} added successfully..`);
+    
   };
 
   return (
