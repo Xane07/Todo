@@ -4,7 +4,7 @@ import Link from "next/link";
 import { useState } from "react";
 
 export default function Admin() {
-  const api = "https://json-wlj8.onrender.com/tasks";
+  const api = "https://upgraded-space-engine-7469967946r2w5pr-8080.app.github.dev/tasks";
   const [name, setName] = useState("");
 
   const postData = async () => {
