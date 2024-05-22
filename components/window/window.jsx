@@ -3,7 +3,7 @@ import React from "react";
 import Tasks from "../tasks/tasks";
 import "./window.css";
 import { useEffect, useState } from "react";
-const api = "https://upgraded-space-engine-7469967946r2w5pr-8080.app.github.dev/tasks"
+const api = "https://json-wlj8.onrender.com/tasks"
 
 const Window = () => {
   useEffect(() => {
